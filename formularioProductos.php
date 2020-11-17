@@ -50,7 +50,7 @@
             <a class="nav-link" style="color: #eaebf3;" href="formularioProductos.php">Registro de Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="color: #eaebf3;" href="#">Productos en Bodega</a>
+            <a class="nav-link" style="color: #eaebf3;" href="productosBodega.php">Productos en Bodega</a>
         </li>
     </ul>
     </div>
@@ -66,7 +66,7 @@
 <main>
 <div class="container">
             <form action="registroProductos.php" method="POST">
-                <h1>REGISTRO DE PRODUCTOS</h1>
+                <h1 style="text-align:center;">REGISTRO DE PRODUCTOS</h1>
                 
                 <div class="row">
                     <div class="col">
@@ -79,6 +79,12 @@
                 <div class="row mt-3">
                     <div class="col">
                         <input type="number" class="form-control" placeholder="valorProduto" name="valor">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <label class="font-weight-bold">Foto:</label>
+                        <input type="text" class="form-control" placeholder="foto URL" name="foto">
                     </div>
                 </div>                    
                 <div class="row mt-3">

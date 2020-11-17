@@ -6,8 +6,6 @@
     <title>Tienda Web</title>
     <link rel="icon" href="images/icono.jpg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
 
@@ -66,17 +64,55 @@
 </header>
 
 <main>
+    <?php
+
+        include("BaseDatos.php");
+
+        $transaccion= new BaseDatos();
+
+        $consultaSQL="SELECT * FROM productos WHERE 1";
+
+        $productos=$transaccion->consultarDatos($consultaSQL);
+
+        print_r($productos);
+
+    ?>
+
+
+<div class="container">
+
+<div class="row row-cols-1 row-cols-md-3">
+
+    <?php foreach($productos as $producto): ?>
+        
+        <div class="col mb-4">
+            <div class="card h-100">
+                <img src="<?php echo($producto["foto"]) ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title"><?php echo($producto["nombreProducto"])?></h3>
+                    <p class="card-text"><?php echo($producto["marcaProducto"])?></p>
+                    <p class="card-text"><?php echo($producto["valorProducto"])?></p>
+                    <p class="card-text"><?php echo($producto["descripcionProducto"])?></p>
+                    <a href="eliminarProductos.php?id=<?php echo($producto["idProducto"]) ?>" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+        </div> 
+    
+    
+    
+    
+    <?php endforeach ?>    
+
+</div>
+
+
+
+
+</div>
+
 </main>
 
 <footer>
-  <div class="redes-container"></div>
-    <ul>
-      <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
-    </ul>
-  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

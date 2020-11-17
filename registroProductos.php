@@ -15,7 +15,10 @@ if(isset($_POST["botonRegistro"])){
 
 
     $transaccion=new BaseDatos();
-    $transaccion->conectarBD();
+    
+    $consultaSQL="INSERT INTO productos (nombreProducto,marcaProducto,valorProducto,descripcionProducto) VALUES ('$nombreProducto','$marcaProducto','$valorProducto','$descripcionProducto')";
+
+    $transaccion->agregarDatos($consultaSQL);
 
 
 }    
