@@ -76,6 +76,22 @@ class BaseDatos{
 
     }
 
+    public function editarDatos($consultaSQL){
+         
+        $conexionBD=$this->conectarBD();
+
+        $consultaEditarDatos=$conexionBD->prepare($consultaSQL);
+        
+        $resultado=$consultaEditarDatos->execute();
+
+        if($resultado){
+            echo("Registro editado con exito");
+        }else{
+            echo("Error editando el registro");
+        }
+
+    }
+
 }
 
 

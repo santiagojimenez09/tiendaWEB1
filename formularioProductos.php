@@ -6,8 +6,11 @@
     <title>Tienda Web</title>
     <link rel="icon" href="images/icono.jpg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="footer.css">
 </head>
-<body>
+
+<body class="fondo">
 
 <header>
 
@@ -84,7 +87,7 @@
                 <div class="row mt-3">
                     <div class="col">
                         <label class="font-weight-bold">Foto:</label>
-                        <input type="text" class="form-control" placeholder="foto URL" name="foto">
+                        <input type="text" class="form-control" placeholder="fotoURL" name="foto">
                     </div>
                 </div>                    
                 <div class="row mt-3">
@@ -101,8 +104,35 @@
 </div>
 </main>
 
-<footer>
+<footer class="text-center footer-style mt-3">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 footer-col">
+                <h3>Redes Sociales</h3>
+                <ul class="list-inline">
+                    <li>
+                        <a  target="_blank" href="https://www.facebook.com/" class="btn-social btn-outline"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a  target="_blank" href="https://www.instagram.com/" class="btn-social btn-outline"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a  target="_blank" href="https://twitter.com" class="btn-social btn-outline"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    </ul>
+            </div>
+            <div class="col-md-4 footer-col">
+                <h3>Urban Shoes</h3>
+                <p>Somos una tienda Web de tenis de las mejores marcas con mas de 5 años en el mercado.</p>
+            </div>
+        </div>
+    </div>
 </footer>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

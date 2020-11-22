@@ -10,6 +10,8 @@ $consultaSQL="DELETE FROM productos WHERE idProducto='$id'";
 
 $transaccion->eliminarDatos($consultaSQL);
 
+header("location:productosBodega.php");
+
 
 
 

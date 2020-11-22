@@ -8,6 +8,7 @@ if(isset($_POST["botonRegistro"])){
     $marcaProducto = $_POST["marca"];
     $valorProducto = $_POST["valor"];
     $descripcionProducto = $_POST["descripcion"];
+    $fotoProducto = $_POST["foto"];
 
     
 
@@ -16,9 +17,11 @@ if(isset($_POST["botonRegistro"])){
 
     $transaccion=new BaseDatos();
     
-    $consultaSQL="INSERT INTO productos (nombreProducto,marcaProducto,valorProducto,descripcionProducto) VALUES ('$nombreProducto','$marcaProducto','$valorProducto','$descripcionProducto')";
+    $consultaSQL="INSERT INTO productos (nombreProducto,marcaProducto,valorProducto,descripcionProducto,fotoProducto) VALUES ('$nombreProducto','$marcaProducto','$valorProducto','$descripcionProducto','$fotoProducto')";
 
     $transaccion->agregarDatos($consultaSQL);
+
+    header("location:formularioProductos.php");
 
 
 }    
